@@ -8,7 +8,7 @@
 
 - Làm quen với việc giao tiếp với 1 ứng dụng khác bằng PHP
 
-- Làm quen với thư viện thuộc symfony[Process](http://symfony.com/doc/current/components/process.html)
+- Làm quen với thư viện thuộc symfony [Process](http://symfony.com/doc/current/components/process.html)
 
 <h3><a href="https://github.com/colombo-trainee/phpcli002">Link đề bài</a></h3>
 
@@ -18,4 +18,4 @@
 
 - Sau khi clone xong chạy:  `composer install`
 
-- Sau đó chạy: `php process.php search.pdf --fields="Creator,Producer"` để xem kết quả. chạy tương tự với các file xxx.pdf khác
+- Sau đó chạy: `php process.php search.pdf --fields=Creator,Producer` để xem kết quả. chạy tương tự với các file xxx.pdf khác
