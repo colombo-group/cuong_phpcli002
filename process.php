@@ -1,14 +1,21 @@
 <?php
+    require 'vendor/autoload.php';
     use Symfony\Component\Process\Process;
     use Symfony\Component\Process\Exception\ProcessFailedException;
-    require 'vendor/autoload.php';
-    if(isset($argv[2])) {
-        $field = ltrim($argv[2],"--fields=");
+    $climate = new League\CLImate\CLImate;
+    $climate->arguments->add([
+        'fields' => [
+            'longPrefix'  => 'fields'
+        ]
+    ]);
+    $climate->arguments->parse();
+    $fields = $climate->arguments->get('fields');
+    if(isset($fields)) {
         $fileName = $argv[1];
         $param = 'pdfinfo ' . $fileName;
         $allInfo = outProcess($param);
         $display = array();
-        foreach (explode(',', $field) as $item) {
+        foreach (explode(',', $fields) as $item) {
             $display[ucfirst($item)]  = $allInfo[ucfirst($item)];
         }
         print_r($display);
