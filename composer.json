@@ -1,0 +1,13 @@
+{
+    "name": "lecuong/process",
+    "description": "learning process",
+    "authors": [
+        {
+            "name": "lecuong",
+            "email": "lecuong732@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/process": "^3.3"
+    }
+}
